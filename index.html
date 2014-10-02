@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>RinkTalk: The Hockey Communication Solution</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="css/rinktalkCSS.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/perfect-scrollbar.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="css/ui-lightness/jquery-ui-1.10.3.custom.css">
+		<script type="text/javascript" src="script/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="script/jquery-ui-1.10.3.custom.js"></script>
+		<script type="text/javascript" src="script/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="script/perfect-scrollbar.js"></script>
+		<script type="text/javascript" src="script/fastclick.js"></script>
+		<script type="text/javascript" src="script/rinktalkJS.js"></script>
+		<script type="text/javascript" src="script/rinktalkJS2.js"></script>
+	</head>
+
+	<body>
+		<div id="headerBar">
+			<img id="logoPic" src="media/logo.png" alt="Rinktalk Logo" title="RinkTalk"/>
+			<h1 id="logoText">RinkTalk</h1>
+			<div id="user">
+				<img id="profileImg" src="media/profile.jpg" alt="Profile Image"/>
+				<p>Pep Band</p>
+			</div>
+		</div>
+
+		<div id="topBar">
+			<h1 id="queueName" >Break Queue</h1>
+			<form>
+			<div id="buttons">
+				<input type="radio" value="breakQueue" id="queue1" onclick="switchQueue('#breakQueue','#mediaQueue')" name="queues" checked="checked"><label for="queue1">Break Queue</label>
+				<input type="radio" value="mediaQueue" id="queue2" onclick="switchQueue('#mediaQueue','#breakQueue')" name="queues"><label for="queue2">Media Timeout Queue</label>
+			</div>
+			</form>
+		</div>
+
+		<div id="columns">
+			<div id="leftColumn">
+				<h2 id="notQueued">You aren't in the Queue!</h2>
+				<h2 id="youreon">You're On:</h2>
+				<div class="queueCount" id="breakCount">Next</div>
+				<h2 id="bEnd">Break</h2>
+				<h2 id="amp">&amp;</h2>
+				<div class="queueCount" id="mediaCount">Next</div>
+				<h2 id="mtEnd">Media Timeout</h2>
+			</div>
+
+			<div id="right">
+				<div id="centerColumn">
+					<div class="queueBox" id="breakQueue">
+						
+					</div>
+
+					<div class= "queueBox" id="mediaQueue">
+						
+					</div>
+					</div>
+				</div>
+
+				<div id="rightColumn">
+					<div id="addButton" onclick="requestQueueAdd()">
+						<h3 class="buttonText"><span class="buttonTop"> Add me</span><br>to the queue</h3>
+						<span id="loadingButton" class="buttonTop">
+							<p>Pending Confirmation...</p>
+							<img src="media/loading_big.gif">
+						</span>
+					</div>
+					<br>
+					<div id="removeButton" onclick="requestQueueRemove()">
+						<h3 id="removeText" class="buttonText"><span class="buttonTop">Remove</span><br>selected turn</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="alertBox">
+			<p>I'm boss as hell</p>
+		</div>
+		<audio src="media/alert1.mp3" id="alert1"></audio>
+		<audio src="media/alert2.mp3" id="alert2"></audio>
+		<audio src="media/alert3.mp3" id="alert3"></audio>
+	</body>
+</html>
