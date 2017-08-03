@@ -40,7 +40,7 @@ $(document).keypress(function(event) {
 });
 
 function loadAssets() {
-	$('body').append('<audio id="audio1"><source src="https://projects.jontheismann.com/rinktalk/assets/dave.mp3" type="audio/mpeg"></audio><audio id="audio2"><source src="https://projects.jontheismann.com/rinktalk/assets/dave2.mp3" type="audio/mpeg"></audio><img src="https://projects.jontheismann.com/rinktalk/assets/dave.png" id="daveImg1" class="imgRes">');
+	$('body').append('<audio id="audio1"><source src="https://jmt521.github.io/RinkTalk/assets/dave.mp3" type="audio/mpeg"></audio><audio id="audio2"><source src="https://jmt521.github.io/RinkTalk/assets/dave2.mp3" type="audio/mpeg"></audio><img src="https://jmt521.github.io/RinkTalk/assets/dave.png" id="daveImg1" class="imgRes">');
 
 }
 
